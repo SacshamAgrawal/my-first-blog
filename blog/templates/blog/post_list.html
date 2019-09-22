@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Blogging Site</title>
+	<title>BlogSpot</title>
 </head>
 <body>
-
-	<p>chotu , tumhari ma ka bhosada</p>
-
+	<h1>BLOGSPOT</h1>
+	{% for post in posts %}
+	<div>
+		<p>{{post.published_date}}</p>
+		<p><a href="">{{post.title}}	</a></p>
+		<p>{{post.text|linebreak}}</p>
+	</div>
+	{% endfor % }
 </body>
 </html>
